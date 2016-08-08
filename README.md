@@ -26,20 +26,19 @@ $ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorf
 ```
 
 ```
-# Python 3
-$ sudo pip3 install --upgrade $TF_BINARY_URL
+# Python
+$ pip install --upgrade $TF_BINARY_URL
 ```
 
 
 
 
-## MINIST ML Sample
+## MNIST ML Sample
 
 ### Command
 
-
 ```
-$python tensorflow/examples/tutorials/mnist/fully_connected_feed.py
+$ python tensorflow/examples/tutorials/mnist/fully_connected_feed.py
 ```
 
 ### Results
@@ -51,4 +50,20 @@ Validation Data Eval:
   Num examples: 5000  Num correct: 4521  Precision @ 1: 0.9042
 Test Data Eval:
   Num examples: 10000  Num correct: 9059  Precision @ 1: 0.9059
+```
+
+
+## TensolBoard Sample
+
+### Command
+
+```
+$ tensorboard --logdir=/xxxx/xxxx/ts_mnist_sample/data
+```
+
+### Results
+
+```
+Starting TensorBoard on port 6006
+(You can navigate to http://0.0.0.0:6006)
 ```
