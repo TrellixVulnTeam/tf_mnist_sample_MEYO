@@ -3,33 +3,32 @@
 
 ## TensorFlow Install
 
-### Pip Installation
+### Anaconda Installation
 
-Python 3.5.1
-TensorFlow 0.10
+- anaconda3-4.1.0
+- TensorFlow 0.10
 
 ```
-# Ubuntu/Linux 64-bit
-$ sudo apt-get install python-pip python-dev
-
-# Mac OS X
-$ sudo easy_install pip
-$ sudo easy_install --upgrade six
+$ pyenv install anaconda3-4.1.0
+$ conda create -n tensorflow python=3.5
 ```
 
 ```
-# Ubuntu/Linux 64-bit, CPU only, Python 3.5
-$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.10.0rc0-cp35-cp35m-linux_x86_64.whl
-
-# Mac OS X, CPU only, Python 3.4 or 3.5:
-$ export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-0.10.0rc0-py3-none-any.whl
+$ source activate tensorflow
+# $ source deactivate
 ```
 
 ```
-# Python
-$ pip install --upgrade $TF_BINARY_URL
+$ conda install -c conda-forge tensorflow
 ```
 
+### Docker Installation
+
+- TensorFlow 0.10
+
+```
+$ docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow
+```
 
 
 
